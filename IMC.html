@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR IMC </h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<hr>");
+    }  
+
+    function imprimir(frase) {
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+    }
+    //queremos mejorar el codigo para aplicar el calculo a varias personas
+    /*   var pesoRody = 62;
+        var alturaRody = 1.56;
+        var imcRody = pesoRody/(alturaRody*alturaRody);
+    imprimir("El indice de IMC de Rody es: "+ imcRody); */
+    function calcularIMC(peso,altura,nombre) { //en este caso los 3 parametros son variables 
+        imc = peso/(altura*altura); //aquí creo otra variable que es imc
+        imprimir("El IMC de "+nombre+" es "+imc); //aqui imprimo usando la otra función.
+    }
+    calcularIMC(62,1.56,"Rody"); //aqui llamamos y pasamos información a la función para que se ejecute
+    calcularIMC(60,1.57,"Dino");
+
+</script>

@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA</h1>
+<br>
+
+<script>
+    /* Para crear una funcion es importante declararla con la palabra:
+    function_nombredeFuncion(aquí_parametros){aquí_instrucciones} 
+    y escribir bien dentro de las llaves las funciones que debe contener
+    Para evitar que haiga error de ejecución en una linea donde se llama a la funcion.
+        */
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    // Y si quisieramos hacer mas entendible el codigo?, usaremos una función para imprimir
+    // y no escribir document.write
+    //en este caso el parametro FRASE recibe información como una variable.
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea(); // tambien puedes llamar otra función dentro de una función.
+    }
+
+var anho = 2025;
+var saltolinea= "<br><br>";
+document.write(saltolinea);
+
+imprimir("Hola mundo")
+imprimir("Pedro tiene: "+ (anho-2000)+ " años");
+imprimir("Juan tiene: "+ (anho-1995)+ " años");
+anho = 2030;
+imprimir("Luis tiene: "+ (anho-2005)+ " años");
+
+</script>

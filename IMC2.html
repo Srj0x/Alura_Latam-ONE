@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR IMC V2 </h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<hr>");
+    }  
+
+    function imprimir(frase) {
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+    }
+
+    function calcularIMC1(peso,altura) { 
+        imc = peso/(altura*altura); 
+      return imc; //return devuelve el valor que se pida, en este caso "imc". Es el OUTPUT en el algoritmo.
+    }
+    
+    var Buba    =   calcularIMC1(62,1.56); //enviamos info a la función para que se ejecute.
+    var Dino    =   calcularIMC1(60,1.57); //pero la almacenamos en una variable para usarla despues.
+    imprimir("El IMC de "+"Buba"+" es "+    Buba); 
+    imprimir("El IMC de "+"Dino"+" es "+    Dino);
+    imprimir("El promedio de IMC de Buba y Dino es: "+ (Buba + Dino)/2); 
+    // En la funcion anterior pasamos las acciones fuera de la función añadiendo variables.
+    // En la siguiente funcion ahorraremos codigo con return 
+    function calcularIMC2(peso,altura) { 
+      return (peso/(altura*altura)); 
+    }
+    //la funcion tiene todo un algoritmo corriendo con menos codigo. INPUT-PROCESS-OUTPUT 
+    imprimir("El promedio de IMC de Juan y Felipe es: "+ (calcularIMC2(72,1.70)+calcularIMC2(60,1.68))/2); 
+
+</script>
