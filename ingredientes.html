@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Recetas de Armando</h1>
+
+<script>
+//El problema es que podemos agregar ingredientes repetidos a una lista de recetas
+//Cambia el código para que no se puedan agregar los ingredientes repetidos.
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    while( contador <= cantidad) {
+        var repetido = false;
+        var ingrediente = prompt("Informe el ingrediente a añadir " + contador);
+        //añadir un ingrediente segun contador
+        for (var posicion=0; posicion < ingredientes.length; posicion++) {
+            //posicion aumenta segun la cantidad de ingredientes
+            if (ingrediente == ingredientes[posicion]){ // posicion te indica en que lugar del array estas
+                repetido = true;
+                alert("ingrediente repetido: " + ingrediente + ", por favor ingrese otro ingrediente")
+                break;
+            }
+        }
+        if (repetido == false) {
+            ingredientes.push(ingrediente);
+            contador++;
+        }
+            
+    }
+    console.log(ingredientes);
+    document.write("Los ingredientes agregados son: "+ ingredientes)
+</script>

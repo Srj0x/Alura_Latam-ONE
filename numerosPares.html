@@ -1,0 +1,23 @@
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");        
+        document.write("<hr>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+      
+    var numeroMax= parseInt(prompt("Ingrese el número máximo para probar:"))
+    //100
+    var contador=2;
+
+    while(contador <= numeroMax){
+        
+        imprimir("numero par: "+ contador);
+        contador=contador+2;
+    }
+    imprimir("fin del programa");
+</script>

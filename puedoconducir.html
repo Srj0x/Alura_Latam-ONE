@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+//Debe mostrar el mensaje "Puedes conducir" o "No puedes conducir". 
+// Recuerda que puede conducir solo quien tiene 18 años o más y
+// también quien tiene una licencia de conducir.
+    var nombre = prompt("¿Cuál es su nombre?")
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+if (edad >= 18 && edad < 80) {
+    if (tieneLicencia == "S"){
+        alert (nombre + " Usted está apto para conducir")
+    }
+    if (tieneLicencia == "N"){
+        alert(nombre + " Usted no puede conducir")
+    }
+}
+if (edad >= 18 && edad > 80) {
+    if (tieneLicencia == "S"){
+        alert (nombre + " Usted no está apto para conducir")
+    }
+    if (tieneLicencia == "N"){
+        alert(nombre + " Usted no está apto para conducir")
+    }
+}
+else {
+        imprimir(nombre + " ¡usted no puede conducir!")
+}
+</script>

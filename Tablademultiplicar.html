@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA TABLA DE MULTIPLICAR V1</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");        
+        document.write("<hr>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    // La primera forma sería con WHILE:
+    imprimir("WHILE");
+    var multiplicador = 1
+    while(multiplicador <= 10){
+        imprimir(5*multiplicador);
+        multiplicador = multiplicador + 1; //el incremento tambien se puede hacer 
+        // de esta forma: multiplicador++;  así se ahorra codigo. apliquemoslo a FOR
+    }
+
+    //La segunda forma con FOR:
+    imprimir("FOR");
+        //la función for se compone así for(parte1;parte2;parte3){}
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador++){
+        imprimir(7*multiplicador);
+    }
+
+</script>

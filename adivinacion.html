@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA ADIVINA EL NÚMERO V2</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<hr>");
+    }  
+
+    function imprimir(frase) {
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+    }
+
+var numeroRandom = Math.round(Math.random()*10);
+var intentos = 6;
+var contador = 1;
+
+while(contador <= intentos){
+
+    var numeroadivinado = parseInt(prompt("Ingrese un número entre 1-10 "));
+    if ( numeroRandom == numeroadivinado){    
+    alert("Felicitaciones adivinó el número!!!, en el intento " + contador + " el numero era: " + numeroRandom);
+        break; //esta función es como una tijera. corta la iteración.  
+    }
+    if ( numeroRandom != numeroadivinado){     
+    alert("Usted erró!")
+        }
+    contador++;
+    }
+    imprimir("fin del juego, el numero era: " + numeroRandom);
+</script>

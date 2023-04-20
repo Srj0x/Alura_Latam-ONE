@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR IMC V4 </h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<hr>");
+    }  
+    function imprimir(frase) {
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+    }
+    function calcularIMC(peso,altura) { 
+          return (peso/(altura*altura));
+    }
+    nombre=prompt("ingrese su nombre por favor:");
+    pesoInformado=prompt(nombre + " indique su peso: ");
+    alturaInformada=prompt(nombre + " indique su altura:");
+    imcCalculado=calcularIMC(pesoInformado,alturaInformada);
+    
+    imprimir (nombre + " tu IMC calculado según los datos ingresados es: " + imcCalculado)
+    if (imcCalculado < 18.5){
+        imprimir(nombre + " tu IMC está por debajo de lo recomendado por la OMS")
+    }
+    if (imcCalculado >= 18.5){
+        if (imcCalculado < 25) {        //doble IF es el metodo en cascada
+        imprimir(nombre + " tu IMC es normal según lo recomendado por la OMS")
+        }
+    }
+    if (imcCalculado >= 25 && imcCalculado < 30){ // este metodo ahorra código
+        imprimir(nombre + " según tu IMC estas con SOBREPESO de acuerdo a los estándares de la OMS")
+    }
+    if (imcCalculado >= 30){
+        if (imcCalculado < 35)
+        {imprimir(nombre + " según tu IMC tienes OBESIDAD tipo I")
+    }
+    if (imcCalculado < 40 && imcCalculado >= 35)
+        {imprimir(nombre + " según tu IMC tienes OBESIDAD tipo II")
+    }
+    if (imcCalculado >= 40)
+        {imprimir(nombre + " según tu IMC tienes OBESIDAD tipo III")
+    }
+    }
+   
+    </script>

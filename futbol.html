@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR PUNTOS DE UN EQUIPO DE FUTBOL V1</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<hr>");
+    }  
+
+    function imprimir(frase) {
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+    }
+//como convertimos texto(string) a número(Int)?
+var victorias = parseInt(prompt("Informe la cantidad de victorias: "));//parseInt convierte el dato
+var empates = parseInt(prompt("Informe la cantidad de empates: "));//de texto a número
+puntosTotal = (victorias * 3) + empates;
+imprimir("La cantidad de puntos es: " + puntosTotal)
+if (puntosTotal > 25){      // Los si o IF son condiciones que buscan booleanos TRUE
+    imprimir("El equipo esta mejor que antes")
+}
+if (puntosTotal < 25){      // dependiendo del resultado del parametro de entrada
+    imprimir("El equipo esta mejor que antes")
+}
+if (puntosTotal == 25){     // arrojan el contenido que resulte TRUE
+    imprimir("El equipo esta mejor que antes")
+}
+
+</script>

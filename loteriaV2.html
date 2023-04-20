@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA JUEGO DE ADIVINACION- LOTERIA V2</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");        
+        document.write("<hr>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    function sorteo(numerobase){
+        if (numerobase==0){
+            return Math.round(Math.random()*numerobase+2);
+        }
+        else {
+            return Math.round(Math.random()*numerobase);
+        }
+    }
+    alert("Bienvenido al juego de adivinación, aquí tu creas tu posibilidad de ganar")
+    var numerobase= parseInt(prompt("digita tu número de la suerte"))
+    var numeroPensado = sorteo(numerobase);
+    var numeroLanzado = parseInt(prompt("Piense en un número entre 0-"+numeroPensado))
+
+    if(numeroPensado == numeroLanzado){
+        imprimir("usted acertó, felicitaciones!! la suerte le acompaña, tu número ganador es el: " + numeroLanzado)
+    }
+    else{
+        if (numeroLanzado > numeroPensado){
+            imprimir("Fallaste buddy, tu número: " + numeroLanzado + ", es mayor al número ganador: "+ numeroPensado)
+        } 
+        else{
+            imprimir("Fallaste buddy, tu número: " + numeroLanzado + ", es menor al número ganador: "+ numeroPensado);
+        }
+    }
+
+</script>
